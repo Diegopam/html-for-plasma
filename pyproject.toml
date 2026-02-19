@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "html-for-plasma"
+version = "0.1.0"
+description = "Convert simple HTML UI structures into QML skeletons for Qt/Plasma"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+  { name = "html-for-plasma contributors" }
+]
+license = { text = "MIT" }
+keywords = ["html", "qml", "qt", "plasma", "converter"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent"
+]
+
+[project.scripts]
+html-for-plasma = "html_for_plasma.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
