@@ -10,6 +10,7 @@ Permitir que uma pessoa monte um layout inicial em HTML e gere um app/base QML c
 
 - Conversor funcional via CLI.
 - Suporte inicial para componentes HTML como:
+- Suporte inicial para **10 componentes HTML**:
   - `div`/containers
   - `span`, `p`, `label`, `h1`, `h2`, `h3`
   - `button`
@@ -19,6 +20,7 @@ Permitir que uma pessoa monte um layout inicial em HTML e gere um app/base QML c
   - `a`
   - `ul` / `ol`
   - `li`
+
 
 ## Instalação (Linux)
 
@@ -87,7 +89,18 @@ html-for-plasma/
   tests/test_converter.py
 ```
 
+
 ## Rodar testes
+
+## Como rodar
+
+```bash
+PYTHONPATH=src python -m html_for_plasma.cli \
+  --input samples/sample_dashboard.html \
+  --output build/Main.qml
+```
+
+## Testes
 
 ```bash
 PYTHONPATH=src pytest -q
@@ -97,4 +110,6 @@ PYTHONPATH=src pytest -q
 
 - O v1 foca em mapeamento seguro e previsível.
 - CSS avançado (grid complexo, pseudo-classes, animações, etc.) ainda não é suportado.
+
 - Veja detalhes completos em [`docs/MVP_SPEC.md`](docs/MVP_SPEC.md).
+- Veja detalhes completos no arquivo [`docs/MVP_SPEC.md`](docs/MVP_SPEC.md).
